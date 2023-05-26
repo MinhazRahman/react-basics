@@ -1,6 +1,12 @@
 // create component
-function ProfileCard() {
-  return <div>Profile Card</div>;
+// using destructuring syntax
+function ProfileCard({ title, handle }) {
+  return (
+    <div>
+      <h1>{title}</h1>
+      <h2>{handle}</h2>
+    </div>
+  );
 }
 
 // export the component
