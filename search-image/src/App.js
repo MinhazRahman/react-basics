@@ -1,5 +1,14 @@
+import SearchBar from "./components/SearchBar";
+
 function App() {
-  return <div>Image searching app!!</div>;
+  const handleSubmit = (param) => {
+    console.log("Search for: ", param);
+  };
+  return (
+    <div>
+      <SearchBar onSubmit={handleSubmit} />
+    </div>
+  );
 }
 
 export default App;
