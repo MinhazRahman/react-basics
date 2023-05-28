@@ -1,15 +1,25 @@
+import "./css/App.css";
 import { useState } from "react";
+import Fruit from "./Fruit";
+
+function getRandomFruit() {
+  const fruits = ["apple", "grape", "berry", "mango", "pineapple", "orange"];
+  return fruits[Math.floor(Math.random() * fruits.length)];
+}
 
 function App() {
-    const [count, setCount] = useState(0);
+  const [fruits, setFruits] = useState([]);
 
   const handleClick = () => {
-      setCount(count + 1);
+    setFruits([...fruits, getRandomFruit()]);
   };
+  const renderedFruits = fruits.map((fruit, index) => {
+    return <Fruit type={fruit} key={index} />;
+  });
   return (
-    <div>
-          <button onClick={handleClick}>Add Fruit</button>
-          <div>Number of Fruits: { count}</div>
+    <div className="app">
+      <button onClick={handleClick}>Add Fruit</button>
+      <div className="fruit-list">{renderedFruits}</div>
     </div>
   );
 }
