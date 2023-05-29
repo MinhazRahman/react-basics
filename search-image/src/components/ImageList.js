@@ -1,3 +1,4 @@
+import "bulma/css/bulma.css";
 import ShowImage from "./ShowImage";
 
 function ImageList({ images }) {
@@ -6,7 +7,7 @@ function ImageList({ images }) {
     return <ShowImage key={image.id} image={image} />;
   });
 
-  return <div>{renderedImages}</div>;
+  return <div className="columns is-multiline is-mobile">{renderedImages}</div>;
 }
 
 export default ImageList;

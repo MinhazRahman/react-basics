@@ -1,3 +1,4 @@
+import "bulma/css/bulma.css";
 import { useState } from "react";
 import SearchBar from "./components/SearchBar";
 import ImageList from "./components/ImageList";
@@ -15,7 +16,13 @@ function App() {
   };
   return (
     <div>
+      <section className="hero is-info">
+        <div className="hero-body">
+          <p className="title">Image Gallery</p>
+        </div>
+      </section>
       <SearchBar onSubmit={handleSubmit} />
+
       <ImageList images={images} />
     </div>
   );

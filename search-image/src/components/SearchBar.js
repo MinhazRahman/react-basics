@@ -14,7 +14,13 @@ function SearchBar({ onSubmit }) {
   return (
     <div>
       <form onSubmit={handleFormSubmit}>
-        <input value={param} onChange={handleChange} />
+        <input
+          className="input is-info is-medium"
+          type="text"
+          value={param}
+          onChange={handleChange}
+          placeholder="Enter search term..."
+        />
       </form>
     </div>
   );
