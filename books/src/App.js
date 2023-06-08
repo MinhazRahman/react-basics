@@ -1,5 +1,14 @@
+import BookCreate from "./components/BookCreate";
+
 function App() {
-  return <div>My Books App</div>;
+  const createBook = (title) => {
+    console.log(`Title: ${title}`);
+  };
+  return (
+    <div>
+      <BookCreate onCreate={createBook} />
+    </div>
+  );
 }
 
 export default App;
