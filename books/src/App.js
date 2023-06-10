@@ -1,14 +1,26 @@
 import BookCreate from "./components/BookCreate";
 import BookList from "./components/BookList";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [books, setBooks] = useState([]);
 
+  // get the list of all the books
+  const fetchBooks = async () => {
+    const response = await axios.get("http://localhost:3001/books");
+    // set the books state
+    setBooks(response.data);
+  };
+
+  // fetch all the books when the app loads up
+  useEffect(() => {
+    fetchBooks();
+  }, []);
+
   // create a new book and update the books state
   const createBook = async (title) => {
-    const response = await axios.post(" http://localhost:3001/books", {
+    const response = await axios.post("http://localhost:3001/books", {
       title,
     });
 
