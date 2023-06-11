@@ -1,20 +1,20 @@
 {
   "books": [
     {
-      "title": "Headfirst Java",
-      "id": 2
-    },
-    {
-      "title": "Effective Java",
-      "id": 4
-    },
-    {
       "title": "Machine Learning",
       "id": 5
     },
     {
       "title": "Data Science",
       "id": 6
+    },
+    {
+      "title": "CI/CD Pipeline",
+      "id": 7
+    },
+    {
+      "title": "Effective Java",
+      "id": 8
     }
   ]
 }
